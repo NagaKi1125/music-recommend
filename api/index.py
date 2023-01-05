@@ -1,6 +1,6 @@
 
-from recommendation import MusicRecommendation
-from flask import Flask, redirect, url_for, request
+from api.recommendation import MusicRecommendation
+from flask import Flask, request
 import joblib
 app = Flask(__name__)
 
