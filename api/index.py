@@ -5,7 +5,7 @@ import joblib
 app = Flask(__name__)
 
 music_recommend = MusicRecommendation()
-file_name = 'model.joblib'
+file_name = '../model.joblib'
 song_cluster_pipeline = joblib.load(file_name)
 
 
