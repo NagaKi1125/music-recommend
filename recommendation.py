@@ -31,9 +31,9 @@ def flatten_dict_list(dict_list):
 
 class MusicRecommendation:
     # read data
-    data = pd.read_csv("../data/data.csv")
-    genre_data = pd.read_csv('../data/data_by_genres.csv')
-    year_data = pd.read_csv('../data/data_by_year.csv')
+    data = pd.read_csv("data/data.csv")
+    genre_data = pd.read_csv('data/data_by_genres.csv')
+    year_data = pd.read_csv('data/data_by_year.csv')
     # lyrics_df = pd.read_csv('data/lyrics.csv')
     # spotify
     sp = spotipy.Spotify(

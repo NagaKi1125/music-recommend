@@ -1,7 +1,10 @@
 
-from recommendation import MusicRecommendation
+
 from flask import Flask, request
 import joblib
+
+from recommendation import MusicRecommendation
+
 app = Flask(__name__)
 
 music_recommend = MusicRecommendation()
@@ -12,10 +15,6 @@ song_cluster_pipeline = joblib.load(file_name)
 @app.route('/')
 def home():
     return 'Hello, World!'
-
-@app.route('/about')
-def about():
-    return 'About'
 
 
 @app.route('/recommend', methods=['GET'])
@@ -30,13 +29,6 @@ def recommendation():
 def fetch_track():
     result = music_recommend.fetchTrack()
     return result
-
-
-# @app.route('/track/lyric', methods=['GET'])
-# def getTrackLyric():
-#     track_name = request.get_data()
-#     result = music_recommend.getTrackLyrics(name=track_name)
-#     return result
 
 
 # data analyze
