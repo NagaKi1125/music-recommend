@@ -1,5 +1,5 @@
 
-from api.recommendation import MusicRecommendation
+from recommendation import MusicRecommendation
 from flask import Flask, request
 import joblib
 app = Flask(__name__)
